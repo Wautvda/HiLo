@@ -2,7 +2,7 @@ using FluentValidation;
 using HiLo.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace HiLo.Feature.Game.CreateGame;
+namespace HiLo.Feature.Game.Create;
 
 public class CreateGameRequestValidator : AbstractValidator<CreateGameRequest>
 {

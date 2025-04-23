@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace HiLo.Feature.Game.CreateGame;
+namespace HiLo.Feature.Game.Create;
 
 public static class CreateGameRequestHandler
 {

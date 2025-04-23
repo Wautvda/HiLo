@@ -1,4 +1,4 @@
-using HiLo.Feature.Game.CreateGame;
+using HiLo.Feature.Game.Create;
 
 namespace HiLo.Feature.Game;
 

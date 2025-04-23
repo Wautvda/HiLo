@@ -1,13 +1,13 @@
 using FluentValidation;
 using HiLo.Domain;
-using HiLo.Feature.Game.CreateGame;
+using HiLo.Feature.Game.Create;
 using HiLo.Infrastructure.Database;
 using Microsoft.AspNetCore.Http.HttpResults;
 using MockQueryable.Moq;
 using Moq;
 using Shouldly;
 
-namespace Hilo.UnitTests.Feature.Game.CreateGame;
+namespace Hilo.UnitTests.Feature.Game.Create;
 
 public class CreateGameRequestHandlerTests
 {

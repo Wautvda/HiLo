@@ -25,4 +25,8 @@
       <ProjectReference Include="..\HiLo\HiLo.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Feature\Game\Guess\" />
+    </ItemGroup>
+
 </Project>

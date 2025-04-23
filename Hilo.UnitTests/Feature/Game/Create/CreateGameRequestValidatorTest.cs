@@ -1,10 +1,10 @@
 using FluentValidation.TestHelper;
 using HiLo.Configuration;
-using HiLo.Feature.Game.CreateGame;
+using HiLo.Feature.Game.Create;
 using Microsoft.Extensions.Options;
 using Shouldly;
 
-namespace Hilo.UnitTests.Feature.Game.CreateGame;
+namespace Hilo.UnitTests.Feature.Game.Create;
 
 public class CreateGameRequestValidatorTest
 {
