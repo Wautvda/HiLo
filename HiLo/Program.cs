@@ -1,6 +1,7 @@
 using Asp.Versioning;
 using FluentValidation;
 using HiLo.Extensions;
+using HiLo.Feature.Game;
 using HiLo.Feature.Player;
 using HiLo.Feature.Player.CreatePlayer;
 using Scalar.AspNetCore;
@@ -42,5 +43,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.MapPlayerEndpoints();
+app.AddGameEndpoints();
 
 await app.RunAsync();
