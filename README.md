@@ -19,3 +19,5 @@ Start the application that will autostart a scalar UI.
 - Finalise the game when the player guesses the number.
 - Add paging
 - Add sql docker container
+- Add different game modes (Ef inheritance)
+- Add UI (angular, react, vue) To use all endpoints and SignalR.
