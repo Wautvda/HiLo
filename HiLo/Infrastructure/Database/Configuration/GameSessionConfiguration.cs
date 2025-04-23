@@ -11,7 +11,8 @@ public class GameSessionConfiguration : IEntityTypeConfiguration<GameSession>
         builder.HasKey(gs => gs.SessionId);
         
         builder
-            .HasMany(gs => gs.Players)
-            .WithMany();
+            .HasMany<Player>()
+            .WithMany()
+            .UsingEntity<PlayerStatistics>();
     }
 }

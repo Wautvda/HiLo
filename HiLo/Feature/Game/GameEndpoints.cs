@@ -1,4 +1,5 @@
 using HiLo.Feature.Game.Create;
+using HiLo.Feature.Game.Guess;
 
 namespace HiLo.Feature.Game;
 
@@ -18,5 +19,8 @@ public static class GameEndpoints
 
         gameV1
             .MapPost("create", CreateGameRequestHandler.Handle);
+
+        gameV1
+            .MapPost("guess/{sessionId:guid}", GuessRequestHandler.Handle);
     }
 }
