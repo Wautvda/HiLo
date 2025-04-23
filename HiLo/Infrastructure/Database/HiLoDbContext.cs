@@ -6,13 +6,12 @@ namespace HiLo.Infrastructure.Database;
 
 public class HiLoDbContext : DbContext
 {
-    public DbSet<Player> Players { get; set; }
-    public DbSet<GameSession> Sessions { get; set; }
+    public virtual DbSet<Player> Players { get; set; }
+    public virtual DbSet<GameSession> Sessions { get; set; }
+
+    public HiLoDbContext() { }
     
-    public HiLoDbContext(DbContextOptions<HiLoDbContext> options)
-        : base(options)
-    {
-    }
+    public HiLoDbContext(DbContextOptions<HiLoDbContext> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
