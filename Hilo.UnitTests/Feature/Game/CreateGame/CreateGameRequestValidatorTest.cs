@@ -1,12 +1,14 @@
 using FluentValidation.TestHelper;
+using HiLo.Configuration;
 using HiLo.Feature.Game.CreateGame;
+using Microsoft.Extensions.Options;
 using Shouldly;
 
 namespace Hilo.UnitTests.Feature.Game.CreateGame;
 
 public class CreateGameRequestValidatorTest
 {
-    private readonly CreateGameRequestValidator _validator = new();
+    private readonly CreateGameRequestValidator _validator = new(new OptionsWrapper<GameConfiguration>(new GameConfiguration()));
     
     [Theory]
     [InlineData("", 0, 100, "Name is required.")]
@@ -44,7 +46,8 @@ public class CreateGameRequestValidatorTest
     }
 
     [Theory]
-    [InlineData("Player", 0, -1, "MaxValue must be greater than 0.")]
+    [InlineData("Player", 0, -1, "MaxValue must be greater than MinValue.")]
+    [InlineData("Player", 10, 9, "MaxValue must be greater than MinValue.")]
     [InlineData("Player", 0, 101, "MaxValue must be equal or less than 100.")]
     public async Task WhenInvalidMaxValue_ShouldReturnError(string playerName, int minValue, int maxValue, string expectedErrorMessage)
     {
