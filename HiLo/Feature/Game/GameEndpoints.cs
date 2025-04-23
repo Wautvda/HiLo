@@ -1,6 +1,7 @@
 using HiLo.Feature.Game.Create;
 using HiLo.Feature.Game.Guess;
 using HiLo.Feature.Game.Join;
+using HiLo.Feature.Game.List;
 
 namespace HiLo.Feature.Game;
 
@@ -20,6 +21,9 @@ public static class GameEndpoints
 
         gameV1
             .MapPost("create", CreateGameRequestHandler.Handle);
+
+        gameV1
+            .MapGet("", ListGameRequestHandler.Handle);
 
         gameV1
             .MapPost("guess/{sessionId:guid}", GuessRequestHandler.Handle);
